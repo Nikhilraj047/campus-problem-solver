@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Campus Problem Solver</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <h1>🎓 Campus Problem Solver</h1>
+      <span class="badge-ai">AI Triage</span>
+    </div>
+
+    <nav aria-label="Main Navigation">
+      <button class="tab on" data-v="report">📝 Report</button>
+      <button class="tab" data-v="tickets">🎫 Tickets <span id="nav-count" class="nav-pill">0</span></button>
+      <button class="tab" data-v="dash">📊 Dashboard</button>
+    </nav>
+
+    <div class="controls">
+      <div class="role-wrap">
+        <label for="role">Role</label>
+        <select id="role">
+          <option value="Student">Student</option>
+          <option value="Admin">Admin</option>
+        </select>
+      </div>
+      <button id="theme-btn" class="icon-btn" title="Toggle Dark/Light Theme" aria-label="Toggle Theme">🌓</button>
+    </div>
+  </header>
+
+  <main id="app"></main>
+
+  <!-- Toast Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Ticket Detail Modal -->
+  <div id="modal-backdrop" class="modal-backdrop hidden">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-header">
+        <h2 id="modal-title">Ticket Details</h2>
+        <button id="modal-close" class="icon-btn" aria-label="Close modal">✕</button>
+      </div>
+      <div id="modal-body" class="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Photo Lightbox Modal -->
+  <div id="lightbox" class="modal-backdrop hidden">
+    <div class="lightbox-wrap">
+      <button id="lightbox-close" class="icon-btn lightbox-close">✕</button>
+      <img id="lightbox-img" src="" alt="Attached issue photo">
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
